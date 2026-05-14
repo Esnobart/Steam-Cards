@@ -1,0 +1,16 @@
+.tableBtn {
+    border: none;
+    background-color: transparent;
+}
+
+thead {
+    border-color: black;
+    border-top: 2px;
+    border-bottom: 2px;
+}
+
+tr:focus {
+    border-color: black;
+    border-top: 2px;
+    border-bottom: 2px;
+}

@@ -16,8 +16,6 @@ function App() {
         const response = await api.get("/collections");
 
         setCollections(response.data);
-
-        console.log(response.data);
       } catch (err) {
         console.error(err);
       } finally {
@@ -59,9 +57,9 @@ function App() {
   }
 
   return (
-    <>
-      <table>
-        <thead>
+    <div className="rootDiv">
+      <table className="table">
+        <thead className="thead">
           <tr>
             <th>
               <button
@@ -90,13 +88,16 @@ function App() {
                 Total Price
               </button>
             </th>
-            <th>URL</th>
+            <th className="tableUrl">URL</th>
           </tr>
         </thead>
 
         <tbody>
           {visibleCollections.map((item) => (
-            <tr key={`${item.appId}-${item.url}-${item.totalPrice}`}>
+            <tr
+              key={`${item.appId}-${item.url}-${item.totalPrice}`}
+              className="tableRow"
+            >
               <td>{item.gameName}</td>
               <td>{item.totalCards}</td>
               <td>
@@ -110,19 +111,27 @@ function App() {
         </tbody>
       </table>
 
-      <div>
+      <div className="NavBttnsContainer">
         {currentPage > 1 && (
-          <button type="button" onClick={() => changePage(currentPage - 1)}>
+          <button
+            type="button"
+            onClick={() => changePage(currentPage - 1)}
+            className="NavBttns"
+          >
             Previous Page
           </button>
         )}
         {currentPage < totalPages && (
-          <button type="button" onClick={() => changePage(currentPage + 1)}>
+          <button
+            type="button"
+            onClick={() => changePage(currentPage + 1)}
+            className="NavBttns"
+          >
             Next Page
           </button>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

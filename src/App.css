@@ -1,16 +1,58 @@
+.rootDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+.thead {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
 .tableBtn {
+    padding: 8px 0px 8px 0px;
     border: none;
     background-color: transparent;
+    font-size: 24px;
+    font-weight: normal;
 }
 
-thead {
-    border-color: black;
-    border-top: 2px;
-    border-bottom: 2px;
+.tableUrl {
+    padding: 8px 0px 8px 0px;
+    font-size: 24px;
+    font-weight: normal;
 }
 
-tr:focus {
-    border-color: black;
-    border-top: 2px;
-    border-bottom: 2px;
+.tableRow td {
+    padding: 6px 0 6px 0;
+}
+
+.tableRow:hover td {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.NavBttnsContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.NavBttns {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.NavBttns:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
